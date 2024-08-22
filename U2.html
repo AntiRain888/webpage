@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放页面</title>
+
+</head>
+<style>
+*{margin:0; padding:0; }
+
+
+
+body
+    {      
+        background-size: cover;
+    }
+#box-video
+{
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow:hidden;
+}
+
+.cd
+    {
+    width:422px;
+    height:422px;
+    position:absolute;
+    top:25%;
+    left:10%;
+    z-index:2;
+    border-radius:50%;
+    border:10px solid #FFF;
+    box-shadow:5px 5px 15px #000;
+    background:url(images/cd_img.jpg) no-repeat;
+    }
+
+.center
+    {
+        width:100px;
+        height:100px;
+        background-color:#000000;
+        border-radius:50%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-left:-50px;
+        margin-top:-50px;
+        z-index:3;
+        border:5px solid #575757;
+        background-image:url(images/yinfu.gif);
+        background-position: center center;
+        background-repeat:no-repeat;
+    }
+    
+.song
+    {
+        position:absolute;
+        top:25%;
+        left:50%;
+    }
+
+@font-face
+    {
+        font-family:MD;
+        src:url(font/MD.ttf);
+    }
+
+h2  
+    {
+        font-family:MD;
+        font-size:110px;
+        color:#ff2525;
+    }
+    
+p
+    {
+        width:556px;
+        height:300px;
+        font-family:"微软雅黑";
+        padding-left:30px;
+        line-height:30px;
+        background:url(images/bg.png) repeat-x;
+        box-sizing:border-box;
+    }
+
+</style>
+<body>
+
+        <body background="BG.jpg"> 
+        <div class="cd">
+            <div class="center"></div>
+        </div>
+
+        
+
+        <div class="song">
+            <h2>歌曲名字</h2>
+            <p>歌词 歌词<br/>歌词 歌词<br/>歌词 歌词<br/>歌词 歌词<br/>歌词 歌词<br/></p>
+
+            <audio src="music/童话镇.mp3"  loop  controls></audio>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
