@@ -10,18 +10,32 @@
 </head>
 <body>
     <body id="body" background="../webpage/images/BG.jpg">
-        <div class="cd">
-            <div class="center"></div>
-        </div>
-
-
-
+    <div class="upper-container">        
         <div class="song">
             <h2>歌曲名字</h2>
             <p>歌词 歌词<br />歌词 歌词<br />歌词 歌词<br />歌词 歌词<br />歌词 歌词<br /></p>
-
             <audio src="music/童话镇.mp3" loop controls></audio>
         </div>
+        <div class="audio-box">
+            <div class="audio-container">
+                <audio id="audioTag"></audio>
+            <div class="a-progress">
+                <div class="pgs-total" id="progress-total">
+                    <div class="pgs-play" id="progress" style="width: 0%;"></div>
+                </div>
+            </div>
+                <div class="a-controls">
+                    <div class="time-container">
+                        <span class="played-time" id="playedTime">00:00</span>&nbsp;/&nbsp;
+                        <span class="audio-time" id="audioTime">00:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cd">
+                <div class="center"></div>
+            </div>
+        </div> 
+    </div>   
         <script src="./js/audio.js"></script>
     </body>
 

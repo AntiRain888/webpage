@@ -9,12 +9,17 @@ body {
     backdrop-filter: blur(50px);
     overflow: hidden;
 }
+.upper-container {
+    width: 80%;
+    padding-left: 10%;
+    height: 80%;
+}
 .cd {
     width: 500px;
     height: 500px;
     position: absolute;
-    top: 25%;
-    left: 10%;
+    top: 400%;
+    left: 5%;
     z-index: 2;
     border-radius: 50%;
     border: 10px solid #FFF;
@@ -60,3 +65,66 @@ p {
     background: url("../images/bg.png") repeat-x;
     box-sizing: border-box;
 }
+/* 下方控制栏*/
+.audio-box {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.audio-container {
+    width: 90%;
+}
+.a-controls {
+    width: 100%;
+}
+/* 进度条 */
+.a-progress {
+    width: 100%;
+    color: #42b680;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.pgs-total {
+    width: 100%;
+    height: 16px;
+    background-color: transparent;
+    border-radius: 10px;
+    position: relative;
+}
+
+.a-progress .pgs-total:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7px;
+    bottom: 7px;
+    background-color: #bbbbbb;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.a-progress .pgs-total .pgs-play:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    bottom: 7px;
+    left: 0;
+    right: 0;
+    background-color: #42b680;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.a-progress .pgs-total .pgs-play {
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+}
+
