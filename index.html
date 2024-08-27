@@ -2,41 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音乐播放页面</title>
-    <link rel="stylesheet" type="text/css" href="./css/audio.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音乐播放页面</title>
+  <link rel="stylesheet" type="text/css" href="./css/audio.css">
 </head>
+
 <body>
-    <body id="body" background="../webpage/images/BG.jpg">
-    <div class="upper-container">        
-        <div class="song">
-            <h2>歌曲名字</h2>
-            <p>歌词 歌词<br />歌词 歌词<br />歌词 歌词<br />歌词 歌词<br />歌词 歌词<br /></p>
-            <audio src="music/童话镇.mp3" loop controls></audio>
-        </div>
-        <div class="audio-box">
-            <div class="audio-container">
-                <audio id="audioTag"></audio>
-            <div class="a-progress">
-                <div class="pgs-total" id="progress-total">
-                    <div class="pgs-play" id="progress" style="width: 0%;"></div>
-                </div>
-            </div>
-                <div class="a-controls">
-                    <div class="time-container">
-                        <span class="played-time" id="playedTime">00:00</span>&nbsp;/&nbsp;
-                        <span class="audio-time" id="audioTime">00:00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="cd">
-                <div class="center"></div>
-            </div>
-        </div> 
-    </div>   
-        <script src="./js/audio.js"></script>
-    </body>
+  <div class="upper-container">
+    <div class="song">
+      <h2>歌曲名字</h2>
+      <p>歌词 歌词<br />歌词 歌词<br />歌词 歌词<br />歌词 歌词<br />歌词 歌词<br /></p>
+      <audio loop controls id="player" src="./music/童话镇.mp3"></audio>
+    </div>
+    <div class="audio-box">
+      <div class="cd">
+        <div class="center"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="audio-container">
+    <audio id="audioTag"></audio>
+    <div class="a-progress">
+      <div class="pgs-total" id="progress-total">
+        <div class="pgs-play" id="progress" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="a-controls">
+      <div class="time-container">
+        <span class="played-time" id="playedTime">00:00</span>&nbsp;/&nbsp;
+        <span class="audio-time" id="audioTime">00:00</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/audio.js"></script>
+</body>
 
 </html>

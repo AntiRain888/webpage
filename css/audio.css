@@ -2,18 +2,21 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-body {
+
     height: 100%;
     background-size: cover;
     backdrop-filter: blur(50px);
     overflow: hidden;
+
+    background: url('../images/BG.jpg?width=1920&height=1080&quality=75&as=webp') no-repeat;
 }
+
 .upper-container {
     width: 80%;
     padding-left: 10%;
     height: 80%;
 }
+
 .cd {
     width: 500px;
     height: 500px;
@@ -24,8 +27,9 @@ body {
     border-radius: 50%;
     border: 10px solid #FFF;
     box-shadow: 5px 5px 15px #000;
-    background: url("../images/cd_img.jpg") no-repeat;
+    background: url("../images/cd_img.jpg?quality=75&as=webp") no-repeat;
 }
+
 .center {
     width: 100px;
     height: 100px;
@@ -42,20 +46,24 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 @font-face {
     font-family: MD;
     src: url("../font/MD.ttf");
 }
+
 h2 {
     font-family: MD;
     font-size: 110px;
     color: #ff2525;
 }
+
 .song {
     position: absolute;
     top: 25%;
     left: 50%;
 }
+
 p {
     width: 556px;
     height: 300px;
@@ -65,6 +73,7 @@ p {
     background: url("../images/bg.png") repeat-x;
     box-sizing: border-box;
 }
+
 /* 下方控制栏*/
 .audio-box {
     width: 100%;
@@ -75,12 +84,15 @@ p {
     overflow: hidden;
 
 }
+
 .audio-container {
-    width: 90%;
+
 }
+
 .a-controls {
     width: 100%;
 }
+
 /* 进度条 */
 .a-progress {
     width: 100%;
@@ -127,4 +139,3 @@ p {
     position: relative;
     border-radius: 10px;
 }
-

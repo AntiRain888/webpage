@@ -1,0 +1,11 @@
+{
+  "name": "webpage",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "sharp": "^0.31.3"
+  }
+}
