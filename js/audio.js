@@ -1,6 +1,10 @@
 const player = document.getElementById('player');
 const playedTime = document.getElementById('playedTime');
 const audioTime = document.getElementById('audioTime');
+// 暂停&播放
+const number=true;
+const music=document.getElementById("music");
+const pp=document.getElementById("pp");
 
 function formatTime(time) {
   const secondPart = Math.floor(time % 60).toString().padStart(2, '0');
@@ -8,9 +12,27 @@ function formatTime(time) {
   return `${minutePart}:${secondPart}`;
 }
 
+
 setInterval(() => {
   playedTime.innerText = formatTime(player.currentTime);
   audioTime.innerText = formatTime(player.duration);
 
   const ratio = player.currentTime / player.duration;
 }, 1000);
+
+// 暂停/播放功能
+pp.onclick=function(){
+  if(number===false){
+     number=true;
+    document.getElementById("pp1").style.display="block";
+    document.getElementById("pp2").style.display="none";
+  
+    music.pause();
+     
+  }else{
+    document.getElementById("pp1").style.display="none";
+    document.getElementById("pp2").style.display="block";
+    number=false;
+    music.play();
+  }
+};

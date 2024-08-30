@@ -81,8 +81,9 @@ p {
     background-color: #fff;
 }
 
-.a-controls {
-    width: 100%;
+.left-controls {
+    width: 25%;
+    display:flex;
 }
 
 /* 进度条 */
@@ -130,4 +131,30 @@ p {
     height: 100%;
     position: relative;
     border-radius: 10px;
+}
+
+.time-container {
+    width: 100%;
+}
+
+.center-controls{
+    position: absolute;
+    left: 40%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+}
+.playpause1 {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/继续播放.png");
+    background-size: 100% 100%;
+}
+
+.playpause2 {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/暂停.png");
+    background-size: 100% 100%;
 }
