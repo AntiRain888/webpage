@@ -6,6 +6,11 @@ const number=true;
 const music=document.getElementById("music");
 const pp=document.getElementById("pp");
 
+// 上一首
+const skipForward = document.getElementById('skipup');
+// 下一首
+const skipBackward = document.getElementById('skipdown');
+
 function formatTime(time) {
   const secondPart = Math.floor(time % 60).toString().padStart(2, '0');
   const minutePart = Math.floor(time / 60).toString().padStart(2, '0');
@@ -36,3 +41,21 @@ pp.onclick=function(){
     music.play();
   }
 };
+
+// 上一首
+skipup.addEventListener('click', function (event) {
+  musicId = musicId - 1;
+  if (musicId < 0) {
+      musicId = 3;
+  }
+  initAndPlay();
+});
+
+// 下一首
+skipdown.addEventListener('click', function (event) {
+  musicId = musicId + 1;
+  if (musicId > 3) {
+      musicId = 0;
+  }
+  initAndPlay();
+});

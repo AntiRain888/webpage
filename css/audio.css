@@ -78,7 +78,8 @@ p {
     padding: 1rem 2rem;
     position: sticky;
     bottom: 0;
-    background-color: #fff;
+    background-color: #4a4a4a;
+    display: flex;
 }
 
 .left-controls {
@@ -139,9 +140,11 @@ p {
 
 .center-controls{
     position: absolute;
-    left: 40%;
-    top: 80%;
+    left: 50%;
+    top: 70%;
     transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
 }
 .playpause1 {
     float: left;
@@ -156,5 +159,21 @@ p {
     width: 40px;
     height: 40px;
     background-image: url("../images/暂停.png");
+    background-size: 100% 100%;
+}
+
+.centerleft {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/上一首.png");
+    background-size: 100% 100%;
+}
+
+.centerright {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/下一首.png");
     background-size: 100% 100%;
 }
