@@ -11,6 +11,11 @@ const skipForward = document.getElementById('skipup');
 // 下一首
 const skipBackward = document.getElementById('skipdown');
 
+// 音量调节
+var volume = document.getElementById('volume');
+// 音量调节滑块
+var volumeTogger = document.getElementById('volumn-togger');
+
 function formatTime(time) {
   const secondPart = Math.floor(time % 60).toString().padStart(2, '0');
   const minutePart = Math.floor(time / 60).toString().padStart(2, '0');
@@ -59,3 +64,26 @@ skipdown.addEventListener('click', function (event) {
   }
   initAndPlay();
 });
+
+audio.addEventListener('timeupdate', updateVolumn);
+function updateVolumn() {
+    audio.volume = volumeTogger.value / 70;
+}
+
+
+// 点击音量调节设置静音
+volume.addEventListener('click', setNoVolumn);
+function setNoVolumn() {
+    if (volumeTogger.value == 0) {
+        if (lastVolumn == 0) {
+            lastVolumn = 70;
+        }
+        volumeTogger.value = lastVolumn;
+        volume.style.backgroundImage = "url('../images/音量.png')";
+    }
+    else {
+        lastVolumn = volumeTogger.value;
+        volumeTogger.value = 0;
+        volume.style.backgroundImage = "url('../images/静音.png')";
+    }
+}

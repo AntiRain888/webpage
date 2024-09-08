@@ -177,3 +177,41 @@ p {
     background-image: url("../images/下一首.png");
     background-size: 100% 100%;
 }
+
+.volume1 {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/音量.png");
+    background-size: 100% 100%;
+}
+.volume2 {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/静音.png");
+    background-size: 100% 100%;
+}
+/*音量调节*/
+#volumn-togger {
+    width: 100px;
+    height: 2px;
+    appearance: none;
+    background-color: #dcdcdc;
+    outline: none;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgb(91, 91, 91);
+}
+
+
+#volumn-togger::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    border: 4px solid #33333300;
+    box-shadow: -407px 0 0 400px #ff0000;
+}
