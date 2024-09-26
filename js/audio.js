@@ -18,6 +18,13 @@ const volumeTogger = document.getElementById('volumn-togger');
 //倍速
 const speed = document.getElementById('speed');
 
+// 进度条
+const audio = document.getElementById('music')
+const start = document.querySelector('.start')
+const end = document.querySelector('.end')
+const progressBar = document.querySelector('.progress-bar')
+const now = document.querySelector('.now')
+
 function formatTime(time) {
   const secondPart = Math.floor(time % 60).toString().padStart(2, '0');
   const minutePart = Math.floor(time / 60).toString().padStart(2, '0');
@@ -109,3 +116,32 @@ volumeTogger.addEventListener('change',function(e){
   console.log(e.target.value/100)
   player.volume=e.target.value/100
 })
+
+// 进度条
+function conversion (value) {
+  let minute = Math.floor(value / 60)
+  minute = minute.toString().length === 1 ? ('0' + minute) : minute
+  let second = Math.round(value % 60)
+  second = second.toString().length === 1 ? ('0' + second) : second
+  return `${minute}:${second}`
+}
+
+player.onloadedmetadata = function () {
+  end.innerHTML = conversion(player.duration)
+  start.innerHTML = conversion(player.currentTime)
+}
+
+progressBar.addEventListener('click', function (event) {
+  let coordStart = this.getBoundingClientRect().left
+  let coordEnd = event.pageX
+  let p = (coordEnd - coordStart) / this.offsetWidth
+  now.style.width = p.toFixed(3) * 100 + '%'
+
+  player.currentTime = p * player.duration
+  player.play()
+})
+
+setInterval(() => {
+  start.innerHTML = conversion(player.currentTime)
+  now.style.width = player.currentTime / player.duration.toFixed(3) * 100 + '%'
+}, 1000)

@@ -78,7 +78,7 @@ p {
     padding: 1rem 2rem;
     position: sticky;
     bottom: 0;
-    background-color: #4a4a4a;
+    background-color: #fed7d7;
     display: flex;
 }
 
@@ -88,51 +88,50 @@ p {
 }
 
 /* 进度条 */
-.a-progress {
-    width: 100%;
-    color: #42b680;
-    background-color: transparent;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
 
-.pgs-total {
-    width: 100%;
-    height: 16px;
-    background-color: transparent;
-    border-radius: 10px;
+.progress {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 380px;
+    margin: 100px auto;
+  }
+
+  .progress-bar {
+    margin: 0;
+    padding: 0;
     position: relative;
-}
+    width: 70%;
+    height: 5px;
+    background-color: #eee;
+    vertical-align: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
 
-.a-progress .pgs-total:after {
-    content: '';
+  .now {
+    margin: 0;
+    padding: 0;
     position: absolute;
     left: 0;
-    right: 0;
-    top: 7px;
-    bottom: 7px;
-    background-color: #bbbbbb;
-    border-radius: 10px;
-    z-index: -1;
-}
+    display: inline-block;
+    height: 5px;
+    width: 70%;
+    background: #31c27c;
+  }
 
-.a-progress .pgs-total .pgs-play:before {
+  .now::after {
+    margin: 0;
+    padding: 0;
     content: '';
     position: absolute;
-    top: 7px;
-    bottom: 7px;
-    left: 0;
-    right: 0;
-    background-color: #42b680;
-    border-radius: 10px;
-    z-index: 1;
-}
-
-.a-progress .pgs-total .pgs-play {
-    height: 100%;
-    position: relative;
-    border-radius: 10px;
-}
+    left: 100%;
+    width: 3px;
+    height: 7px;
+    background-color: lightblue;
+  }
 
 .time-container {
     width: 100%;
